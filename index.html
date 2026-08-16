@@ -137,8 +137,6 @@
             background: linear-gradient(135deg, #fff 0%, #f0faf7 100%);
             border-bottom: 2px solid var(--light-green);
             padding: 1.5rem 0;
-            position: sticky;
-            top: 0;
             z-index: 100;
             box-shadow: 0 2px 8px rgba(15, 77, 63, 0.08);
             animation: fadeInDown 0.6s ease-out;
@@ -175,6 +173,7 @@
             color: white;
             font-weight: bold;
             font-size: 1.2rem;
+            animation: scaleIn 0.6s ease-out;
         }
 
         nav {
@@ -205,26 +204,6 @@
 
         nav a:hover::after {
             width: 100%;
-        }
-
-        .locale-switcher {
-            display: flex;
-            gap: 1rem;
-            border-left: 2px solid var(--border-light);
-            padding-left: 2rem;
-            animation: fadeInRight 0.6s ease-out;
-        }
-
-        .locale-switcher a {
-            color: var(--light-text);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .locale-switcher a.active {
-            color: var(--accent-green);
         }
 
         /* ===== HERO SECTION ===== */
@@ -464,18 +443,10 @@
         .service-card:nth-child(3) {
             animation-delay: 0.2s;
         }
+
         .service-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 8px 25px rgba(15, 77, 63, 0.15);
-        }
-
-        .service-card img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-            object-position: center;
-            margin-bottom: 1.5rem;
-            animation: scaleIn 0.6s ease-out;
         }
 
         .service-icon {
@@ -606,15 +577,6 @@
             box-shadow: 0 8px 25px rgba(15, 77, 63, 0.15);
         }
 
-        .advantage-card img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-            object-position: center;
-            margin: 0 auto 1.5rem;
-            animation: scaleIn 0.6s ease-out;
-        }
-
         .advantage-icon {
             width: 70px;
             height: 70px;
@@ -656,7 +618,6 @@
             overflow: hidden;
             animation: slideInUp 0.8s ease-out;
         }
-
         .document-summary {
             background: linear-gradient(135deg, var(--light-green), var(--pale-green));
             padding: 1.5rem 2rem;
@@ -819,15 +780,6 @@
             animation: glow 1s ease-in-out infinite;
         }
 
-        .contact-card img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            object-position: center;
-            margin-bottom: 1.5rem;
-            animation: scaleIn 0.6s ease-out;
-        }
-
         .contact-icon {
             width: 50px;
             height: 50px;
@@ -922,20 +874,13 @@
             .hero-content h1 {
                 font-size: 2rem;
             }
+
             .section-title {
                 font-size: 2rem;
             }
 
             .hero-buttons {
                 flex-direction: column;
-            }
-
-            .locale-switcher {
-                border-left: none;
-                padding-left: 0;
-                border-top: 2px solid var(--border-light);
-                padding-top: 1rem;
-                margin-top: 1rem;
             }
         }
 
@@ -985,11 +930,6 @@
                 <a href="#documents">Документы</a>
                 <a href="#contacts">Контакты</a>
             </nav>
-            <div class="locale-switcher">
-                <a href="#" class="active">RU</a>
-                <a href="#">KG</a>
-                <a href="#">EN</a>
-            </div>
         </div>
     </header>
 
@@ -1041,17 +981,17 @@
             <h2 class="section-title">Наши услуги</h2>
             <div class="services-grid">
                 <div class="service-card">
-                   <img src="Брокерские услуги.png" alt="Брокерские услуги">
+                   <img src="Брокерские услуги.png">
                     <h3>Брокерские услуги</h3>
                     <p>Профессиональное исполнение сделок на финансовых рынках с прозрачностью и надежностью расчетов.</p>
                 </div>
                 <div class="service-card">
-                    <img src="Дилерские операции.png" alt="Дилерские операции">
+                    <img src="Дилерские операции.png">
                     <h3>Дилерские операции</h3>
                     <p>Поддержание котировок и участие в сделках за собственный счет для обеспечения рыночной ликвидности.</p>
                 </div>
                 <div class="service-card">
-                    <img src="Доверительное управление.png" alt="Доверительное управление">
+                    <img src="Доверительное управление.png">
                     <h3>Доверительное управление</h3>
                     <p>Структурированные инвестиционные решения с учетом целей клиента и допустимого уровня риска.</p>
                 </div>
@@ -1089,17 +1029,17 @@
             <h2 class="section-title">Преимущества</h2>
             <div class="advantages-grid">
                 <div class="advantage-card">
-                    <img src="dostup_k_likvid.png" alt="Доступ к ликвидности">
+                    <img src="dostup_k_likvid.png">
                     <h3>Доступ к ликвидности</h3>
                     <p>Устойчивый доступ к исполнению сделок и рыночной инфраструктуре.</p>
                 </div>
                 <div class="advantage-card">
-                    <img src="regel_prozr.png" alt="Регуляторная прозрачность">
+                    <img src="regel_prozr.png">
                     <h3>Регуляторная прозрачность</h3>
                     <p>Работа в рамках лицензируемой и понятной клиенту модели.</p>
                 </div>
                 <div class="advantage-card">
-                    <img src="instit_podhod.png" alt="Контроль рисков">
+                    <img src="instit_podhod.png">
                     <h3>Контроль рисков</h3>
                     <p>Структурированная оценка и контроль риска на каждом этапе.</p>
                 </div>
@@ -1237,17 +1177,17 @@
             <h2 class="section-title">Контакты</h2>
             <div class="contacts-grid">
                 <div class="contact-card">
-                    <img src="adres.png" alt="Адрес">
+                    <img src="adres.png">
                     <h3>Адрес</h3>
                     <p>Кыргызская Республика, г. Бишкек, Первомайский район, ул.Раззакова, 19, 7 этаж</p>
                 </div>
                 <div class="contact-card">
-                    <img src="email.png" alt="Email">
+                    <img src="email.png">
                     <h3>Email</h3>
                     <a href="mailto:info@bnbroker.kg">info@bnbroker.kg</a>
                 </div>
                 <div class="contact-card">
-                    <img src="phone.png" alt="Телефон">
+                    <img src="phone.png">
                     <h3>Телефон</h3>
                     <a href="tel:+996558960141">+996 558 960 141</a>
                 </div>
@@ -1301,4 +1241,3 @@
     </script>
 </body>
 </html>
-
