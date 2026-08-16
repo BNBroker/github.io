@@ -175,7 +175,6 @@
             color: white;
             font-weight: bold;
             font-size: 1.2rem;
-            animation: scaleIn 0.6s ease-out;
         }
 
         nav {
@@ -465,10 +464,18 @@
         .service-card:nth-child(3) {
             animation-delay: 0.2s;
         }
-
         .service-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 8px 25px rgba(15, 77, 63, 0.15);
+        }
+
+        .service-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            object-position: center;
+            margin-bottom: 1.5rem;
+            animation: scaleIn 0.6s ease-out;
         }
 
         .service-icon {
@@ -597,6 +604,15 @@
         .advantage-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(15, 77, 63, 0.15);
+        }
+
+        .advantage-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            object-position: center;
+            margin: 0 auto 1.5rem;
+            animation: scaleIn 0.6s ease-out;
         }
 
         .advantage-icon {
@@ -803,6 +819,15 @@
             animation: glow 1s ease-in-out infinite;
         }
 
+        .contact-card img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            object-position: center;
+            margin-bottom: 1.5rem;
+            animation: scaleIn 0.6s ease-out;
+        }
+
         .contact-icon {
             width: 50px;
             height: 50px;
@@ -897,7 +922,6 @@
             .hero-content h1 {
                 font-size: 2rem;
             }
-
             .section-title {
                 font-size: 2rem;
             }
@@ -982,10 +1006,7 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="hero-visual">
                 <img src="BNB_LOGO.png" alt="Описание" style="width: 100%; max-width: 300px;">
-            </div>
-                </svg>
             </div>
         </div>
     </section>
@@ -1020,17 +1041,17 @@
             <h2 class="section-title">Наши услуги</h2>
             <div class="services-grid">
                 <div class="service-card">
-                   <img src="Брокерские услуги.png">
+                   <img src="Брокерские услуги.png" alt="Брокерские услуги">
                     <h3>Брокерские услуги</h3>
                     <p>Профессиональное исполнение сделок на финансовых рынках с прозрачностью и надежностью расчетов.</p>
                 </div>
                 <div class="service-card">
-                    <img src="Дилерские операции.png">
+                    <img src="Дилерские операции.png" alt="Дилерские операции">
                     <h3>Дилерские операции</h3>
                     <p>Поддержание котировок и участие в сделках за собственный счет для обеспечения рыночной ликвидности.</p>
                 </div>
                 <div class="service-card">
-                    <img src="Доверительное управление.png">
+                    <img src="Доверительное управление.png" alt="Доверительное управление">
                     <h3>Доверительное управление</h3>
                     <p>Структурированные инвестиционные решения с учетом целей клиента и допустимого уровня риска.</p>
                 </div>
@@ -1068,17 +1089,17 @@
             <h2 class="section-title">Преимущества</h2>
             <div class="advantages-grid">
                 <div class="advantage-card">
-                    <img src="dostup_k_likvid.png">
+                    <img src="dostup_k_likvid.png" alt="Доступ к ликвидности">
                     <h3>Доступ к ликвидности</h3>
                     <p>Устойчивый доступ к исполнению сделок и рыночной инфраструктуре.</p>
                 </div>
                 <div class="advantage-card">
-                    <img src="regel_prozr.png">
+                    <img src="regel_prozr.png" alt="Регуляторная прозрачность">
                     <h3>Регуляторная прозрачность</h3>
                     <p>Работа в рамках лицензируемой и понятной клиенту модели.</p>
                 </div>
                 <div class="advantage-card">
-                    <img src="instit_podhod.png">
+                    <img src="instit_podhod.png" alt="Контроль рисков">
                     <h3>Контроль рисков</h3>
                     <p>Структурированная оценка и контроль риска на каждом этапе.</p>
                 </div>
@@ -1216,17 +1237,17 @@
             <h2 class="section-title">Контакты</h2>
             <div class="contacts-grid">
                 <div class="contact-card">
-                    <img src="adres.png">
+                    <img src="adres.png" alt="Адрес">
                     <h3>Адрес</h3>
                     <p>Кыргызская Республика, г. Бишкек, Первомайский район, ул.Раззакова, 19, 7 этаж</p>
                 </div>
                 <div class="contact-card">
-                    <img src="email.png">
+                    <img src="email.png" alt="Email">
                     <h3>Email</h3>
                     <a href="mailto:info@bnbroker.kg">info@bnbroker.kg</a>
                 </div>
                 <div class="contact-card">
-                    <img src="phone.png">
+                    <img src="phone.png" alt="Телефон">
                     <h3>Телефон</h3>
                     <a href="tel:+996558960141">+996 558 960 141</a>
                 </div>
