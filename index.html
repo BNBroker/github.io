@@ -1064,7 +1064,7 @@
                         </div>
                         <div class="doc-card">
                             <h4>Отчет об изменениях Q1</h4>
-                            <a href="docs/Change_capital_BNB_1q.pdf" target="_blank" class="doc-link">Открыть PDF →</a>
+                            <a href="docs/Change_capital_BNB_ 1q.pdf" target="_blank" class="doc-link">Открыть PDF →</a>
                         </div>
                         <div class="doc-card">
                             <h4>Отчет о прибылях Q1</h4>
@@ -1239,5 +1239,47 @@
             });
         });
     </script>
+<!-- ===== BNB language switcher (self-contained) ===== -->
+<style>
+#bnbLang{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.22);
+  border-radius:999px;overflow:hidden;vertical-align:middle;margin-left:14px;
+  font-family:inherit;line-height:1;z-index:9999}
+#bnbLang .bnb-lang{padding:7px 13px;font-size:13px;font-weight:700;letter-spacing:.4px;
+  text-decoration:none;color:inherit;opacity:.6;transition:.15s;white-space:nowrap}
+#bnbLang .bnb-lang+.bnb-lang{border-left:1px solid rgba(255,255,255,.22)}
+#bnbLang .bnb-lang:hover{opacity:1}
+#bnbLang .bnb-lang.is-active{background:#006d5b;color:#1a1a1a;opacity:1}
+#bnbLang.bnb-float{position:fixed;top:14px;right:14px;
+  background:rgba(13,20,36,.92);color:#eaf0ff;backdrop-filter:blur(6px)}
+</style>
+
+<div id="bnbLang" role="group" aria-label="Language">
+  <a class="bnb-lang" data-l="ru" href="./index.html" hreflang="ru">RU</a>
+  <a class="bnb-lang" data-l="kg" href="./BNB_V_final_KG.html" hreflang="ky">KG</a>
+  <a class="bnb-lang" data-l="en" href="./BNB_V_final_ENG.html" hreflang="en">EN</a>
+</div>
+
+<script>
+(function(){
+  var box = document.getElementById('bnbLang');
+  var f = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  var cur = f.indexOf('eng') > -1 ? 'en' : (f.indexOf('_kg') > -1 || f.indexOf('kg.') > -1 ? 'kg' : 'ru');
+
+  Array.prototype.forEach.call(box.children, function(a){
+    if (a.getAttribute('data-l') === cur){
+      a.classList.add('is-active');
+      a.setAttribute('aria-current','page');
+    }
+  });
+
+  // ищем вашу шапку и встраиваемся в неё; если не нашли — фиксируем в углу
+  var host = document.querySelector('header nav')
+          || document.querySelector('header .container, header .wrap, header > div')
+          || document.querySelector('header, .header, .navbar, .topbar');
+
+  if (host) { host.appendChild(box); } else { box.classList.add('bnb-float'); }
+})();
+</script>
+<!-- ===== /BNB language switcher ===== -->
 </body>
 </html>
